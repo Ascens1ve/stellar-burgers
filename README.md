@@ -1,19 +1,32 @@
-# Проектная работа 11-го спринта
+# Stellar Burgers - React SPA
 
-[Макет](<https://www.figma.com/file/vIywAvqfkOIRWGOkfOnReY/React-Fullstack_-Проектные-задачи-(3-месяца)_external_link?type=design&node-id=0-1&mode=design>)
+**Соберите бургер мечты, следите за заказами в реал-тайме и управляйте своим профилем — всё в одном приложении.**
 
-[Чеклист](https://www.notion.so/praktikum/0527c10b723d4873aa75686bad54b32e?pvs=4)
+## О проекте
 
-## Этапы работы:
+Stellar Burger — учебная проектная работа (React, TypeScript, Redux Toolkit) с авторизацией, защищёнными и вложенными маршрутами, реал-тайм обновлениями ленты заказов, заказов профиля и подробной покрывающей авто-тестами (Jest, Cypress E2E).
 
-1. Разверните проект и ознакомьтесь с кодом. Все необходимые вам компоненты уже созданы и лежат в папке `src/components`
+## Технологии
 
-2. Настройте роутинг.
+- **React 18** + **TypeScript**
+- **Redux Toolkit**
+- **React Router v6**
+- **Jest**
+- **Cypress** 13 (E2E, fixtures, intercept)
+- **ESLint**, **Prettier**, **Storybook** 
 
-3. Напишите функционал запросов данных с сервера, используя `Redux` и глобальный `store`. Сами "ручки" уже прописаны и лежат в `utils/burger-api.ts`
+## Быстрый старт
 
-4. Настройте авторизацию и создайте защищённые роуты.
+```bash
+# 1. Клонировать репозиторий
+https://github.com/Ascens1ve/stellar-burgers
+cd stellar-burgers
 
-## Важно:
+# 2. Установить зависимости
+npm install
 
-Для корректной работы запросов к серверу необходимо добавить переменную BURGER_API_URL в окружение. Сама ссылка находится в файле `.env.example`.
+# 3. Создать .env (см. пример .env.example)
+cp .env.example .env
+
+# 4. Запуск разработки
+npm run start   # http://localhost:4000
