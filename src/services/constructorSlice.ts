@@ -6,13 +6,13 @@ interface IConstructorItems {
   ingredients: TConstructorIngredient[];
 }
 
-interface burgerConstructorState {
+export interface burgerConstructorState {
   constructorItems: IConstructorItems;
   orderRequest: boolean;
   orderModalData: TOrder | null;
 }
 
-const initialState: burgerConstructorState = {
+export const initialState: burgerConstructorState = {
   constructorItems: {
     bun: null,
     ingredients: []
@@ -29,7 +29,6 @@ const burgerConstructorSlice = createSlice({
       if (action.payload.type === 'bun') {
         state.constructorItems.bun = action.payload;
       } else {
-        // TODO. Может id должен быть другим
         state.constructorItems.ingredients.push({
           ...action.payload,
           id: state.constructorItems.ingredients.length.toString()
